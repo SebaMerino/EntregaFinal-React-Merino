@@ -43,9 +43,9 @@ const Cart = ({ cart, clearWithAlert, deleteProductById, total, navigate }) => {
               </Button>
             </div>
           ) : (
-            <link to="/">
+            <Link to="/">
               <Button variant="contained">Agregar productos</Button>
-            </link>
+            </Link>
           )}
           <h1>Total del carrito es de ${total}</h1>
         </div>
