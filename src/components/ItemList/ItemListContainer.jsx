@@ -42,15 +42,15 @@ const ItemListContainer = () => {
   }, [categoryName]);
 
 
-  const addProducts = ()=>{
+  // const addProducts = ()=>{
 
-    const productsCollection = collection(db, "products")
+  //   const productsCollection = collection(db, "products")
 
-      products.map( product => (
-        addDoc(productsCollection, product)
-      ))
+  //     products.map( product => (
+  //       addDoc(productsCollection, product)
+  //     ))
 
-  }
+  // }
 
   return (
     <div>
