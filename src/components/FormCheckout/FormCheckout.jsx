@@ -9,32 +9,44 @@ const FormCheckout = ({ handleSubmit, handleChange, errors, values }) => {
           <Grid item xs={12} sm={7}>
             <TextField
               id="filled-basic"
-              placeholder="Nombre"
+              label="Nombre"
               variant="filled"
               fullWidth
+              name="nombre"
+              onChange={handleChange}
+              error={errors.nombre ? true : false}
+              helperText={errors.nombre}
             />
           </Grid>
 
           <Grid item xs={12} sm={7}>
             <TextField
               id="filled-basic"
-              placeholder="Email"
+              label="Email"
               variant="filled"
               fullWidth
+              name="email"
+              onChange={handleChange}
+              error={errors.email ? true : false}
+              helperText={errors.email}
             />
           </Grid>
 
           <Grid item xs={12} sm={7}>
             <TextField
               id="filled-basic"
-              placeholder="Phone"
+              label="Phone"
               variant="filled"
               fullWidth
+              name="phone"
+              onChange={handleChange}
+              error={errors.phone ? true : false}
+              helperText={errors.phone}
             />
           </Grid>
 
           <Grid sx={6}>
-            <Button variant="contained" sx={{ marginTop: "2" }}>
+            <Button type="submit" variant="contained" sx={{ marginTop: "2" }}>
               Comprar
             </Button>
           </Grid>

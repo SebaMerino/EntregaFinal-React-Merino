@@ -8,7 +8,7 @@ const ItemCard = ({ item }) => {
       <CardMedia
         sx={{ height: 140 }}
         image={item.img}
-        title="green"
+        title="green iguana"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
@@ -30,4 +30,4 @@ const ItemCard = ({ item }) => {
   )
 }
 
-export default ItemCard
+export default ItemCard;

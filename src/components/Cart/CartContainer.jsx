@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
 const CartContainer = () => {
-  const { cart, deleteProductById, getTotalPrice } = useContext(CartContext);
+  const { cart, clearCart, deleteProductById, getTotalPrice } = useContext(CartContext);
 
   let total = getTotalPrice();
   const navigate = useNavigate();
@@ -21,8 +21,10 @@ const CartContainer = () => {
       confirmButtonText: "Si, eliminar",
     }).then((result) => {
       if (result.isConfirmed) {
-        clearCartWithtAlert();
-        Swal.fire("Eliminar", "", "success");
+        clearCart();
+        Swal.fire("Se vació el carrito", "", "success");
+      } else if (result.isDenied) {
+        Swal.fire("No se vació el carrito", "", "info");
       }
     });
   };

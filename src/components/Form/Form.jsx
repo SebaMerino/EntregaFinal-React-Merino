@@ -9,7 +9,7 @@ const [userData, setUserData] = useState({
 });
 
 const handleChange = (e) => {
-    setUserData ({...userData, [e.target.value]: e.target.value})
+    setUserData ({...userData, [e.target.name]: e.target.value})
 }
 
 const envioDeFormulario = (evento) =>{
